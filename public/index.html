@@ -250,7 +250,7 @@
                     </li>
                   </ul>
                   <!-- parent pages--><a class="nav-link" href="app/kanban.html" role="button">
-                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fab fa-trello"></span></span><span class="nav-link-text ps-1">Kanban</span>
+                    <div class="d-flex align-items-center"><span class="nav-link-icon"><span class="fab fa-trello"></span></span><span class="nav-link-text ps-1">Task</span>
                     </div>
                   </a>
                   <!-- parent pages--><a class="nav-link dropdown-indicator" href="#social" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="social">
@@ -537,6 +537,10 @@
               </li>
             </ul>
           </nav>
+          <div class="container">
+            <h3 class="text-primary mb-1">Welcome, Jasmine!</h3>
+            <p>Here's what's happening today.</p>
+          </div>
           <div class="row g-0">
             <div class="col-md-6 col-xxl-3 mb-3 pe-md-2">
               <div class="card h-md-100 ecommerce-card-min-width">
@@ -574,6 +578,30 @@
             </div>
             <div class="col-md-6 col-xxl-3 mb-3 pe-md-2 ps-xxl-2">
               <div class="card h-md-100">
+                <div class="card-header pb-0">
+                  <h6 class="mt-1">Tenant Occupancy</h6>
+                </div>
+                <div class="card-body">
+                  <div class="row h-100 justify-content-between g-0">
+                    <div class="col-5 col-sm-6 col-xxl pe-2">
+                      <div class="fs--2 mt-3">
+                        <div class="d-flex justify-content-between">
+                          <div class="d-flex flex-column justify-content-between">
+                            <p class="font-sans-serif lh-1 mb-1 fs-2">34%</p><span class="badge badge-soft-warning rounded-pill fs--2"><span class="fas fa-caret-up me-1"></span>3.5%</span>
+                          </div>
+                          <div>
+                            <canvas class="my-n5" id="marketShareDoughnut" width="112"></canvas>
+                            <p class="mb-0 text-center fs--2 mt-4 text-500">Target: <span class="text-800">55% </span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-3 mb-3 pe-md-2 ps-xxl-2">
+              <div class="card h-md-100">
                 <div class="card-body">
                   <div class="row h-100 justify-content-between g-0">
                     <div class="col-5 col-sm-6 col-xxl pe-2">
@@ -595,37 +623,6 @@
                     </div>
                     <div class="col-auto position-relative">
                       <div class="echart-market-share"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xxl-3 mb-3 ps-md-2">
-              <div class="card h-md-100">
-                <div class="card-header d-flex flex-between-center pb-0">
-                  <h6 class="mb-0">Weather</h6>
-                  <div class="dropdown font-sans-serif btn-reveal-trigger">
-                    <button class="btn btn-link text-600 btn-sm dropdown-toggle dropdown-caret-none btn-reveal" type="button" id="dropdown-weather-update" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span class="fas fa-ellipsis-h fs--2"></span></button>
-                    <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="dropdown-weather-update"><a class="dropdown-item" href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
-                      <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Remove</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body pt-2">
-                  <div class="row g-0 h-100 align-items-center">
-                    <div class="col">
-                      <div class="d-flex align-items-center"><img class="me-3" src="assets/img/icons/weather-icon.png" alt="" height="60" />
-                        <div>
-                          <h6 class="mb-2">New York City</h6>
-                          <div class="fs--2 fw-semi-bold">
-                            <div class="text-warning">Sunny</div>Precipitation: 50%
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-auto text-center ps-2">
-                      <div class="fs-4 fw-normal font-sans-serif text-primary mb-1 lh-1">31&deg;</div>
-                      <div class="fs--1 text-800">32&deg; / 25&deg;</div>
                     </div>
                   </div>
                 </div>
@@ -671,14 +668,31 @@
                   </div>
                 </div>
                 <div class="col-md-4 col-xxl-12">
-                  <div class="card h-100">
-                    <div class="card-body">
-                      <div class="row flex-between-center">
-                        <div class="col d-md-flex d-lg-block flex-between-center">
-                          <h6 class="mb-md-0 mb-lg-2">Revenue</h6><span class="badge rounded-pill badge-soft-success"><span class="fas fa-caret-up"></span> 61.8%</span>
+                  <div class="card h-md-100">
+                    <div class="card-header d-flex flex-between-center pb-0">
+                      <h6 class="mb-0">Weather</h6>
+                      <div class="dropdown font-sans-serif btn-reveal-trigger">
+                        <button class="btn btn-link text-600 btn-sm dropdown-toggle dropdown-caret-none btn-reveal" type="button" id="dropdown-weather-update" data-bs-toggle="dropdown" data-boundary="viewport" aria-haspopup="true" aria-expanded="false"><span class="fas fa-ellipsis-h fs--2"></span></button>
+                        <div class="dropdown-menu dropdown-menu-end border py-2" aria-labelledby="dropdown-weather-update"><a class="dropdown-item" href="#!">View</a><a class="dropdown-item" href="#!">Export</a>
+                          <div class="dropdown-divider"></div><a class="dropdown-item text-danger" href="#!">Remove</a>
                         </div>
-                        <div class="col-auto">
-                          <h4 class="fs-3 fw-normal text-700" data-countup='{"endValue":20.18,"decimalPlaces":1,"suffix":"K","prefix":"$"}'>0</h4>
+                      </div>
+                    </div>
+                    <div class="card-body pt-2">
+                      <div class="row g-0 h-100 align-items-center">
+                        <div class="col">
+                          <div class="d-flex align-items-center"><img class="me-3" src="assets/img/icons/weather-icon.png" alt="" height="60" />
+                            <div>
+                              <h6 class="mb-2">New York City</h6>
+                              <div class="fs--2 fw-semi-bold">
+                                <div class="text-warning">Sunny</div>Precipitation: 50%
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-auto text-center ps-2">
+                          <div class="fs-4 fw-normal font-sans-serif text-primary mb-1 lh-1">31&deg;</div>
+                          <div class="fs--1 text-800">32&deg; / 25&deg;</div>
                         </div>
                       </div>
                     </div>
@@ -689,7 +703,7 @@
           </div>
           <br>
           <div class="col">
-            <h5 class="mb-0 text-primary position-relative"><span class="bg-200 dark__bg-1100 pe-3">Progress Report</span><span class="border position-absolute top-50 translate-middle-y w-100 start-0 z-index--1"></span></h5>
+            <h5 class="mb-0 text-primary position-relative"><span class="bg-200 dark__bg-1100 pe-3">Calendar & Task</span><span class="border position-absolute top-50 translate-middle-y w-100 start-0 z-index--1"></span></h5>
           </div>
           <br>
 
